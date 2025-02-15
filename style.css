@@ -1,0 +1,107 @@
+*{
+    margin: 0;
+    padding: 0;
+    scroll-behavior: smooth;
+    text-decoration: none;
+    list-style: none;
+    font-family: Arial, sans-serif;
+    box-sizing: border-box;
+}
+#pc-and-tablet-navbar,
+#mobile-navbar{
+    background-color:#0C4A6E ;
+    width: 100%;
+    height: 3.7rem;
+    z-index: 10;
+}
+a{
+    color:#F9FAFB ;
+}
+#pc-and-tablet-navbar ul{
+    display: flex;
+}
+#home-li{
+    margin-right: auto;
+    margin-top: 0.1rem;
+    width: 4.2rem;
+}
+#pc-and-tablet-navbar ul li{
+    padding: 1rem 0.7rem;
+}
+#accent-li a{
+    color: #10B981;
+}
+#pc-and-tablet-navbar ul li{
+    border-radius: 1.3rem;
+    transition: background-color 1000ms ease-in-out;
+}
+#pc-and-tablet-navbar ul li:not(#home-li){
+    margin: 0.1rem;
+}
+#mobile-navbar{
+    display: none;
+    position: relative;
+}
+button{
+    position: absolute;
+    top: 0.7rem;
+    right: 0.7rem;
+    border: none;
+    display: flex;
+    cursor: pointer;
+    color: rgb(61, 55, 55);
+    font-size: 2.5rem;
+    width: 3rem;
+    align-items: center;
+    justify-content: center;
+    border-radius: 0.5rem; 
+}
+li:hover{
+    background-color: #252323;
+}
+@media screen and (max-width: 500px) {
+    #pc-and-tablet-navbar {
+        position: fixed;
+        right: -200%;
+        top: 3.7rem;
+        height: max(100vh,40.375rem);
+        width: 17rem;
+        transition: right 400ms ease-in-out;
+    }
+    #mobile-navbar{
+        display: block;
+    }
+    nav ul{
+        display: flex;
+        flex-direction: column;
+    }
+    nav ul li a{
+        font-size: 1.3rem;
+        color: #e5e5ed;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border-radius: 1rem;
+        height: 2.5rem;
+    }
+    nav ul li a:hover{
+        transition: background-color 350ms ease-in-out;
+        background-color: #252323;
+    }
+    #home-li{
+        margin-right: unset;
+        margin-top: 0.1rem;
+        width: 100%;
+    }
+    li:hover{
+        background-color: #0C4A6E;
+    }
+    #overlay{
+        position: fixed;
+        background-color: rgba(0, 0, 0,0.5);
+        inset: 0;
+        height: max(100vh,4.3175rem);
+        z-index: 9;
+        display: none;
+    }
+}
